@@ -17,12 +17,14 @@ const styles = StyleSheet.create({
 
 const Home = () => {
   return (
-    <View>
+    <View style={{ marginTop: 0}}>
       <AppBar
         title="Home"
         onSettingsPress={() => console.log("Settings pressed")}
       />
-      <ProfileList></ProfileList>
+      <View style={{ flex: 1, marginTop: 20, justifyContent: 'center', alignItems: 'center'}}>
+        <ProfileList></ProfileList>
+      </View>
     </View>
   );
 };

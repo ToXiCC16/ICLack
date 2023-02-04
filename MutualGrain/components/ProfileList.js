@@ -20,6 +20,7 @@ const ProfileList = () => {
     <View>
       <FlatList
         data={dummyData}
+        style={{width: '100%'}}
         renderItem={({ item }) => (
           <ProfileCard name={item.key} imageSource={item.imageSource} />
         )}
