@@ -7,6 +7,7 @@ export default function App() {
     <NavigationContainer>
       <View style={styles.container}>
         <Image source={require("./assets/logo.png")} />
+        
         <StatusBar style="auto" />
       </View>
     </NavigationContainer>
