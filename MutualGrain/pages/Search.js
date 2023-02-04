@@ -9,7 +9,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={styles.container}>
-        {/* <Image source={require("./assets/logo.png")} /> */}
+        <MapView 
+         style = {{height : '100%', width : '100%'}}
+         coordinate = {Location.getLastKnownPositionAsync}
+         region = {{latitudeDelta: 0.0922,
+         longitudeDelta: 0.0421}}/>
+        
         <StatusBar style="auto" />
       </View>
     </NavigationContainer>
