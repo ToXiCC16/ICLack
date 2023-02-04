@@ -1,15 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import MapView from 'react-native-maps';
-import * as Location from 'expo-location';
-
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <NavigationContainer>
       <View style={styles.container}>
-        {/* <Image source={require("./assets/logo.png")} /> */}
+        <Home />
+        
         <StatusBar style="auto" />
       </View>
     </NavigationContainer>
