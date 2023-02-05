@@ -5,7 +5,7 @@ import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 
 
-export default function App() {
+const Search = () => {
   return (
     <NavigationContainer>
       <View style={styles.container}>
@@ -20,6 +20,8 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+export default Search;
 
 const styles = StyleSheet.create({
   container: {
