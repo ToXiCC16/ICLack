@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View, SafeAreaView } from "react-native";
 import ProfileList from "../components/ProfileList";
 import AppBar from "../components/AppBar";
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 const Home = () => {
   return (
-    <View style={{ marginTop: 0}}>
+    <SafeAreaView style={{ marginTop: 0}}>
       <AppBar
         title="Home"
         onSettingsPress={() => console.log("Settings pressed")}
@@ -25,7 +25,7 @@ const Home = () => {
       <View style={{ flex: 1, marginTop: 20, justifyContent: 'center', alignItems: 'center'}}>
         <ProfileList></ProfileList>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
