@@ -7,9 +7,6 @@ import { Ionicons } from '@expo/vector-icons';
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Settings from "./pages/Settings";
-import MessagePage from "./pages/MessagePage";
-import ProfileList from "./components/ProfileList";
-import Message from "./components/Message";
 
 const user = true;
 
@@ -52,10 +49,10 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="Settings"
+          name="Profile"
           component={Settings}
           options={{
-            tabBarLabel: "Settings",
+            tabBarLabel: "Profile",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="cog-outline"
@@ -80,6 +77,7 @@ export default function App() {
           }}
         /> */}
       </Tab.Navigator>
+      {/* <ProductList /> */}
       <StatusBar style="auto" />
     </NavigationContainer>
   );

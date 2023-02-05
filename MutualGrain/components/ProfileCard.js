@@ -1,7 +1,8 @@
 import { View, Text, Image, StyleSheet, Modal, Pressable } from "react-native";
 import React, {useState} from 'react';
+import products from "./listing";
 
-const ProfileCard = ({ name, imageSource }) => {
+const ProfileCard = ({ data }) => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.container}>
@@ -11,11 +12,16 @@ const ProfileCard = ({ name, imageSource }) => {
         visible = {modalVisible}
         onRequestClose = {() => {
           Alert.alert('Modal has been closed')
-          setContactVisible(!modalVisible);
+          setModalVisible(!modalVisible);
         }} 
       >
         <View style = {styles.modal}>
-          <Text>IT FUCKING WORKSSSS</Text>
+          <Image source={data.imageSource} style = {{height : 50, width : 50}}/>
+          <Text>name: {data.name}</Text>
+          <Text>type: {data.type}</Text>
+          <Text>products: {data.product}</Text>
+          <Text>amount: {data.amount}kg</Text>
+          <Text>price: £{data.price} per kg</Text>
           <Pressable
             style = {[styles.button]}
             onPress = {() => {
@@ -35,8 +41,8 @@ const ProfileCard = ({ name, imageSource }) => {
           setModalVisible(true)
         }}
       >
-        <Image source={imageSource} style={styles.image} />
-        <Text style={styles.name}>{name}</Text>
+        <Image source={data.imageSource} style={styles.image} />
+        <Text style={styles.name}>{data.name}</Text>
       </Pressable>
     </View>
   );
