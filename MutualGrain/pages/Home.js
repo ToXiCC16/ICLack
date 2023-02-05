@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
 
 const Home = () => {
   return (
-    <SafeAreaView style={{ marginTop: 0}}>
+    <SafeAreaView style={{ marginTop: 0 }}>
       <AppBar
         title="Home"
         onSettingsPress={() => console.log("Settings pressed")}
       />
-      <View style={{ flex: 1, marginTop: 20, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{ flex: 1, marginTop: 20 }}>
         <ProfileList></ProfileList>
       </View>
     </SafeAreaView>

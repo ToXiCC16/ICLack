@@ -1,82 +1,49 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Image } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createAppContainer } from "react-navigation";
-import { Ionicons } from "@expo/vector-icons";
-import { createMaterialBottomTabNavigator } from
-    "react-navigation-material-bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 
+const user = true;
 
-
-
-const TabNavigator = createMaterialBottomTabNavigator(  
-  {
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        tabBarLabel: "Home",
-        tabBarIcon: (tabInfo) => (
-          <Ionicons
-            name="md-home"
-            size={tabInfo.focused ? 26 : 20}
-            color={tabInfo.tintColor}
-          />
-        ),
-      },
-    },
-    Search: {
-      screen: Search,
-      navigationOptions: {
-        tabBarLabel: "Search",
-        tabBarIcon: (tabInfo) => (
-          <Ionicons
-            name="md-search"
-            size={tabInfo.focused ? 26 : 20}
-            color={tabInfo.tintColor}
-          />
-        ),
-      },
-    },
-  },
-  {
-    initialRouteName: "Home",
-    barStyle: { backgroundColor: "#006600" },
-  }
-);
-
-const Navigator = createAppContainer(TabNavigator);
-
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Navigator>
-        <Home />
-        <Search/>
-      </Navigator>
+    <NavigationContainer>
+      <Tab.Navigator
+        initialRouteName="Feed"
+        screenOptions={{
+          activeTintColor: "#42f44b",
+        }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarLabel: "Home",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Search"
+          component={Search}
+          options={{
+            tabBarLabel: "Search",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="magnify"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
+      </Tab.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
-
-
-// function MyTabs() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen name="Home" component={Home} />
-//       <Tab.Screen name="Search" component={Search} />
-//     </Tab.Navigator>
-//   );
-// }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
