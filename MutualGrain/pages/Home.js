@@ -22,9 +22,7 @@ const Home = () => {
         title="Home"
         onSettingsPress={() => console.log("Settings pressed")}
       />
-      <View style={{ flex: 1, marginTop: 20 }}>
-        <ProfileList></ProfileList>
-      </View>
+      <ProfileList></ProfileList>
     </SafeAreaView>
   );
 };

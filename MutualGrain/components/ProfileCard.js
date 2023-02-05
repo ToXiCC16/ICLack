@@ -13,7 +13,6 @@ const ProfileCard = ({ name, imageSource }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: null,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#ddd",

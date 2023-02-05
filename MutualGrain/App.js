@@ -4,6 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import MessagePage from "./pages/MessagePage";
+import ProfileList from "./components/ProfileList";
+import Message from "./components/Message";
 
 const user = true;
 
@@ -42,8 +45,24 @@ export default function App() {
             ),
           }}
         />
+        {/* <Tab.Screen
+          name="Messages"
+          component={MessagePage}
+          options={{
+            tabBarLabel: "Messages",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="message"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        /> */}
       </Tab.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
   );
+  // return <MessagePage messages = {messages} />;
+  // return <Message name="Me" message="Hi" />;
 }
