@@ -25,6 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
+      // "permissions": ["ACCESS_COARSE_LOCATION", "FOREGROUND_SERVICE"]
     },
     "web": {
       "favicon": "./assets/favicon.png"

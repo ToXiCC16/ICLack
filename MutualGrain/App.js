@@ -13,6 +13,7 @@ const user = true;
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer>
       {/* <TouchableOpacity  style = {styles.settingsView}>
