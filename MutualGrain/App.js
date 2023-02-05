@@ -7,62 +7,65 @@ import Search from "./pages/Search";
 import MessagePage from "./pages/MessagePage";
 import ProfileList from "./components/ProfileList";
 import Message from "./components/Message";
+import LoginForm from "./Registration/LoginPage";
 
 const user = true;
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Feed"
-        screenOptions={{
-          activeTintColor: "#42f44b",
-        }}
-      >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            tabBarLabel: "Home",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="home" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Search"
-          component={Search}
-          options={{
-            tabBarLabel: "Search",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="magnify"
-                color={color}
-                size={size}
-              />
-            ),
-          }}
-        />
-        {/* <Tab.Screen
-          name="Messages"
-          component={MessagePage}
-          options={{
-            tabBarLabel: "Messages",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="message"
-                color={color}
-                size={size}
-              />
-            ),
-          }}
-        /> */}
-      </Tab.Navigator>
-      <StatusBar style="auto" />
-    </NavigationContainer>
-  );
-  // return <MessagePage messages = {messages} />;
+  // return (
+  //   <NavigationContainer>
+  //     <Tab.Navigator
+  //       initialRouteName="Feed"
+  //       screenOptions={{
+  //         activeTintColor: "#42f44b",
+  //       }}
+  //     >
+  //       <Tab.Screen
+  //         name="Home"
+  //         component={Home}
+  //         options={{
+  //           tabBarLabel: "Home",
+  //           tabBarIcon: ({ color, size }) => (
+  //             <MaterialCommunityIcons name="home" color={color} size={size} />
+  //           ),
+  //         }}
+  //       />
+  //       <Tab.Screen
+  //         name="Search"
+  //         component={Search}
+  //         options={{
+  //           tabBarLabel: "Search",
+  //           tabBarIcon: ({ color, size }) => (
+  //             <MaterialCommunityIcons
+  //               name="magnify"
+  //               color={color}
+  //               size={size}
+  //             />
+  //           ),
+  //         }}
+  //       />
+  //       {/* <Tab.Screen
+  //         name="Messages"
+  //         component={MessagePage}
+  //         options={{
+  //           tabBarLabel: "Messages",
+  //           tabBarIcon: ({ color, size }) => (
+  //             <MaterialCommunityIcons
+  //               name="message"
+  //               color={color}
+  //               size={size}
+  //             />
+  //           ),
+  //         }}
+  //       /> */}
+  //     </Tab.Navigator>
+  //     <StatusBar style="auto" />
+  //   </NavigationContainer> 
+  // );
+  return <LoginForm />;
+  
+
   // return <Message name="Me" message="Hi" />;
 }
