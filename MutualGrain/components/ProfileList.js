@@ -9,7 +9,7 @@ const dummyData = [
   // { key: "Jackson", imageSource: require("./images/jackson.jpg") },
   // { key: "James", imageSource: require("./images/james.jpg") },
   { key: "Devin", imageSource: require("../assets/dummy-profile-pic.png") },
-  { key: "Dan", imageSource: require("../assets/dummy-profile-pic.png") },
+  { key: "Joel", imageSource: require("../assets/dummy-profile-pic.png") },
   { key: "Dominic", imageSource: require("../assets/dummy-profile-pic.png") },
   { key: "Jackson", imageSource: require("../assets/dummy-profile-pic.png") },
   { key: "James", imageSource: require("../assets/dummy-profile-pic.png") },
@@ -17,7 +17,7 @@ const dummyData = [
 
 const ProfileList = () => {
   return (
-    <View>
+    <View  style = {{marginBottom : 0, backgroundColor :  "#9893ea"}}>
       <FlatList
         data={dummyData}
         
